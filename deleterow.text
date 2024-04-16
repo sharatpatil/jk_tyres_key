@@ -1,0 +1,52 @@
+CREATE PROCEDURE DeleteDuplicateRecords
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    DECLARE @DeletedCount INT = 0;
+
+    WHILE EXISTS (
+        SELECT TOP 1 *
+        FROM new_things_data
+        WHERE EXISTS (
+            SELECT 1
+            FROM new_things_data AS T2
+            WHERE new_things_data.things_key = T2.things_key
+            AND new_things_data.timestamp = T2.timestamp
+            AND new_things_data.id <> T2.id  -- Adjust this condition based on your actual primary key column
+        )
+    )
+    BEGIN
+        DELETE TOP (1) FROM new_things_data
+        WHERE EXISTS (
+            SELECT 1
+            FROM new_things_data AS T2
+            WHERE new_things_data.things_key = T2.things_key
+            AND new_things_data.timestamp = T2.timestamp
+            AND new_things_data.id <> T2.id  -- Adjust this condition based on your actual primary key column
+        );
+
+        SET @DeletedCount = @DeletedCount + 1;
+    END
+
+    SELECT @DeletedCount AS 'DeletedCount';
+END;
+
+
+
+DECLARE @DeletedCount INT;
+EXEC @DeletedCount = DeleteDuplicateRecords;
+
+PRINT 'Deleted ' + CAST(@DeletedCount AS NVARCHAR) + ' duplicate records.';
+
+
+
+npm uninstall -g node-windows
+
+npm install -g npm
+
+npm install -g node-windows
+
+npm list -g node-windows
+
+node services.js

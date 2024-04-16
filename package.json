@@ -1,0 +1,44 @@
+{
+  "name": "jk-types-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "script-1": "node efeded6tbb.js",
+    "script-2": "node f1d597831d.js",
+    "script-3": "node 2cdc143f43.js",
+    "script-4": "node 4tfa3b765b.js",
+    "script-5": "node 5c58d23t67.js",
+    "script-6": "node 8a921t3t2d.js",
+    "script-7": "node 9ed1e149a1.js",
+    "script-8": "node 18ac35cfde.js",
+    "script-9": "node 52ac146b26.js",
+    "script-10": "node 86f8ada652.js",
+    "script-11": "node 794ecat31d.js",
+    "script-12": "node 47799b3af4.js",
+    "script-13": "node 193193d481.js",
+    "script-14": "node 527443tbe1.js",
+    "script-15": "node a9t2bb36f7.js",
+    "script-16": "node bffcdd11ef.js",
+    "script-17": "node c3a54419fc.js",
+    "script-18": "node c25beddt44.js",
+    "script-19": "node ee9e4a62ea.js",
+    "script-20": "node f5a9551d7a.js",
+    "start-all": "concurrently \"npm run script-1\" \"npm run script-2\" \"npm run script-3\" \"npm run script-4\" \"npm run script-5\" \"npm run script-6\" \"npm run script-7\" \"npm run script-8\" \"npm run script-9\" \"npm run script-10\" \"npm run script-11\" \"npm run script-12\" \"npm run script-13\" \"npm run script-14\" \"npm run script-15\" \"npm run script-16\" \"npm run script-17\" \"npm run script-18\" \"npm run script-19\" \"npm run script-20\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "child_process": "^1.0.2",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "mssql": "^9.1.1",
+    "node-cron": "^3.0.2",
+    "node-windows": "^1.0.0-beta.8"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
